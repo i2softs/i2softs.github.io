@@ -1,0 +1,19 @@
+# Site settings
+env: prod
+port: 80
+assets_version: 0.0.0
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://i2softs.com" # the base hostname & protocol for your site
+name: I2Soft Technologies
+description: I2Soft Technologies
+
+# Post settings
+excerpt_separator: <!--more-->
+
+# Build settings
+markdown: kramdown
+
+# Sass settings
+sass:
+    style: :compressed

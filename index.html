@@ -1,0 +1,89 @@
+---
+layout: default
+title: Welcome to I2Soft Technologies
+---
+<div id="featured-slide">
+	
+</div>
+<div class="row">
+	<div class="col-sm-3">
+		<div id="news-container" class="section">
+			<div class="section-title">
+				News and Events
+			</div>
+			<div class="section-body">
+				{% if site.categories.news | size > 0 %}
+					<ul class="news-list">
+						{% for post in site.categories.news limit:10 %}
+							<li>
+								{% include badge/post_badge.html %}
+							</li>
+						{% endfor %}
+					</ul>
+				{% else %}
+					<div class="page-message">
+						No news or events to show.
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<div id="welcome" class="section">
+			<div class="section-title">
+				Welcome Message
+			</div>
+			<div class="section-body">
+				<p>I2Soft Technologies is in an exciting and dynamic business – and a demanding one. We corporate values have been developed around a core culture and philosophy demonstrated by its leadership team. The values set out below were developed from independent research into the company’s culture and identified in dialogue with its clients and staff. I2Soft holds these values in high regard and employees are recruited and developed with these qualities in mind.</p>
+				<p>Since its inception in 2006, i2soft has provided a wide array of "innovative solutions and services including Web solutions, custom software/Web applications development and business process automation tools to "empower businesses across the globe. I2soft offers a comprehensive suite of superior solutions and services to promote and optimize your existing business model. The Company's Global Delivery Model provides for the best resources to be drawn from its vast talent pool across the globe to offer optimal solutions. The Company integrates its products and services to create customized solutions to allow you to undertake technology-based business transformation that allows reorganization in line with today's dynamic digital business environment. </p>
+				<a href="{{site.url}}/about" class="read-more">Read More</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div id="service-container" class="section">
+					<div class="section-title">
+						Services
+					</div>
+					<div class="section-body">
+						{% if site.categories.service | size > 0 %}
+							<ul class="service-list">
+								{% for post in site.categories.service limit:10 %}
+									<li>
+										{% include badge/link_badge.html %}
+									</li>
+								{% endfor %}
+							</ul>
+						{% else %}
+							<div class="page-message">
+								No services to show.
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div id="latest-solutions" class="section">
+					<div class="section-title">
+						Latest solutions
+					</div>
+					<div class="section-body">
+						{% if site.categories.solution | size > 0 %}
+							<ul class="news-list">
+								{% for post in site.categories.solution limit:10 %}
+									<li>
+										{% include badge/post_badge.html %}
+									</li>
+								{% endfor %}
+							</ul>
+						{% else %}
+							<div class="page-message">
+								No solutions to show.
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

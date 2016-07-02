@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	{% capture title %}
+	    {% if page.type and page.type == "term" %}
+	        What is {{ page.title }}?
+	    {% elsif page.title and page.title != blank %}
+	        {{ site.name | prepend: " - " | prepend: page.title }}
+	    {% else %}
+	        {{ site.title }}
+	    {% endif %}
+	{% endcapture %}{% assign title = title | strip %}
+	<title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}" type='text/css'>
+  <script src="{{ site.url }}/js/jquery.min.js"></script>
+  <script src="{{ site.url }}/js/bootstrap.min.js"></script>
+  <script src="{{ site.url }}/js/plugins/jquery.timeago.js"></script>
+</head>

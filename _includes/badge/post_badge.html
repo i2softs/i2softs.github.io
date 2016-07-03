@@ -8,7 +8,7 @@
 		</a> <i class="fa fa-clock-o"></i> <time class="timeago" datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time>
 	</div>
 	<div class="content">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde iusto error exercitationem eius velit ut magnam, nobis, nesciunt, et necessitatibus cum. Vero dolorem quaerat, qui aliquid consectetur ullam ab et.
+		{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}
 		<a href="{{ post.url | prepend: site.baseurl }}" class="read-more">read more</a>
 	</div>
 </div>

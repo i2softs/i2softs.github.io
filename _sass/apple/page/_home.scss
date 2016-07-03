@@ -14,7 +14,7 @@
 		line-height: 2em;
 	}
 }
-#service-container {
+#service-container, #latest-solutions {
 	margin-bottom: 10px;
 	ul.service-list {
 		list-style: none;
@@ -24,16 +24,12 @@
 			padding: 0px;
 			a {
 				display: block;
-				margin-bottom: 10px;
 			}
+			margin-bottom: 10px;
 		}
 	}
 }
 
-
-#latest-solutions {
-	margin-bottom: 10px;
-}
 #news-container {
 	margin-bottom: 10px;
 }
